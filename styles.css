@@ -1,292 +1,126 @@
-/* Navigation */
-#navbar {
-    flex-direction: column;
-}
-
-#navbar ul li a{
-    font-size: 1rem;
-    padding: 0px 7px;
-    padding-bottom: 8px;
-}
-/* Home section */
-#home{
-    height: 370px; 
-    padding: 3px 28px;
-}
-
-#home::before{
-    height: 480px; 
-}
-
-#home p{
-    font-size: 13px;
-}
-
-/* Services section  */
-#services{
-    flex-direction: column;
-}
-
-#services .box { 
-    padding: 14px;
-    margin: 2px 0px; 
-    margin-bottom: 20px;
-}
-
-/* Clients section */
-#clients{
-    flex-wrap: wrap;
-}
-
-#clients img{
-    width: 66px;
-    padding: 6px;
-    height: auto;
-}
-
-/* Contact us section */
-#contact-box form{
-    width:80%;
-}
-/* Footer */
-
-/* Utility classes */
-.h-primary{
-    font-size:26px;
-}
-.btn{
-    font-size: 13px;
-    padding: 4px 8px;
-}
-/* CSS Reset */
-*{
+body {
     margin: 0;
-    padding: 0;
+    font-family: Arial, sans-serif;
 }
-
-html{
-    scroll-behavior: smooth;
+/* Navbar styling */
+.navbar {
+    overflow: hidden;
+    background-color: #333;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1;
 }
-
-/* CSS Variables */
-:root{
-    --navbar-height: 59px;
-}
-
-/* Navigation Bar */
-#navbar{
-    display: flex;
-    align-items: center;
-    position: sticky;
-    top: 0px;
-}
-
-#navbar::before{
-    content: "";
-    background-color: black;
-    position: absolute;
-    top:0px;
-    left:0px;
-    height: 100%;
-    width:100%;
-    z-index: -1;
-    opacity: 0.7;
-}
-
-/* Navigation Bar: Logo and Image */
-#logo{
-    margin: 10px 34px;
-}
-
-#logo img{
-    height: 59px;
-    margin: 3px 6px;
-}
-
-
-/* Navigation Bar: List Styling */
-
-#navbar ul{
-    display: flex;
-    font-family: 'Baloo Bhai', cursive;
-}
-
-#navbar ul li{ 
-    list-style: none;
-    font-size: 1.3rem;
-}
-
-#navbar ul li a{
-    color: white;
+.navbar a {
+    float: left;
     display: block;
-    padding: 3px 22px;
-    border-radius: 20px;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
     text-decoration: none;
+    font-size: 17px;
 }
-
-#navbar ul li a:hover{
+.navbar a:hover {
+    background-color: #ddd;
     color: black;
-    background-color: white;
 }
-
-/* Home Section */
-#home{
-    display: flex;
-    flex-direction: column;
-    padding:3px 200px;
-    height: 550px;
-    justify-content: center;
-    align-items: center;
-}
-
-#home::before{ 
-    content: "";
-    position: absolute;
-    background: url('../bg1.jpg') no-repeat center center/cover;
-    height: 642px;
-    top:0px;
-    left:0px;
-    width: 100%;
-    z-index: -1;
-    opacity:0.89;
-}
-
-#home h1{
-    color:white;
-    text-align: center;
-    font-family: 'Bree Serif', serif;
-}
-
-#home p{
-    color:white;
-    text-align: center;
-    font-size: 1.5rem;
-    font-family: 'Bree Serif', serif;
-}
-/* Services Section */
-#services{
-    margin: 34px;
-    display: flex;
-}
-#services .box{ 
-    border: 2px solid brown;
-    padding: 34px;
-    margin: 2px 55px;
-    border-radius: 28px;
-    background: #f2f2f2;
-    margin-bottom: 20px;
-}
-
-#services .box img{ 
-   height: 160px;
-   margin: auto;
-   display: block;
-}
-
-#services .box p{
-    font-family: 'Bree Serif', serif;
-
-} 
-
-/* Clients Section */
-#client-section{ 
-    position: relative;
-}
-
-#client-section::before{
- content: "";
- position: absolute;
- background: url('../bg.jpg');
- width: 100%;
- height: 100%;
- z-index: -1;
- opacity: 0.3;
-}
-
-#clients{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.client-item{
-    padding: 34px;
-}
-
-#clients img{
-    height: 124px;
-}
-
-
-/* Contact Section */
-#contact{
-    position: relative;
-}
-#contact::before{
-    content: "";
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    z-index: -1;
-    opacity: 0.7;
-    background: url('../contact.jpg') no-repeat center center/cover;
-
-}
-#contact-box{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding-bottom: 34px;
-}
-#contact-box input, 
-#contact-box textarea{
-    width: 100%;
-    padding: 0.5rem;
-    border-radius: 9px;
-    font-size: 1.1rem;
-} 
-
-#contact-box form{
-    width: 40%;
-}
-
-#contact-box label{
-   font-size: 1.3rem;
-   font-family: 'Bree Serif', serif;
-
-}
-
-
-footer{
-    background: black;
+.active {
+    background-color: #4CAF50;
     color: white;
-    padding: 9px 20px;
 }
-
-/* Utility Classes */
-.h-primary{
-    font-family: 'Bree Serif', serif;
-    font-size: 3.8rem;
-    padding: 12px;
-}
-
-.h-secondary{
-    font-family: 'Bree Serif', serif;
-    font-size: 2.3rem;
-    padding: 12px;
-}
-
-.btn{
-    padding: 6px 20px;
-    border: 2px solid white;
-    background-color: brown;
+/* Logo styling */
+.logo {
+    display: inline-block;
+    padding: 14px 16px;
+    font-size: 20px;
     color: white;
-    margin: 17px;
-    font-size: 1.5rem;
-    border-radius: 10px;
-    cursor:pointer;
 }
-
-.center{
+/* Delivery section styling */
+.delivery-section {
+    background-color: #f2f2f2;
+    padding: 50px;
     text-align: center;
+}
+.delivery-section h2 {
+    font-size: 40px;
+    margin-bottom: 30px;
+}
+.delivery-section p {
+    font-size: 20px;
+    margin-bottom: 30px;
+}
+.delivery-section button {
+    background-color: #4CAF50;
+    color: white;
+    font-size: 20px;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.delivery-section button:hover {
+    background-color: #3e8e41;
+}
+.content-section {
+    padding: 50px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+.content-box {
+    flex-basis: 30%;
+    padding: 20px;
+    margin: 20px;
+    background-color: #f2f2f2;
+    text-align: center;
+    border-radius: 5px;
+    box-shadow: 0 0 5px 1px rgba(0,0,0,0.1);
+}
+.content-box img {
+    width: 100%;
+    height: auto;
+    margin-bottom: 10px;
+}
+.content-box h3 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+.content-box p {
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+/* Media queries for responsiveness */
+@media screen and (max-width: 768px) {
+    .content-box {
+        flex-basis: 45%;
+    }
+}
+@media screen and (max-width: 600px) {
+    .content-box {
+        flex-basis: 100%;
+    }
+}
+/* Media queries for responsiveness */
+@media screen and (max-width: 600px) {
+    .navbar a, .logo {
+        display: none;
+    }
+    .navbar a.icon {
+        float: right;
+        display: block;
+    }
+    .responsive .navbar.responsive {
+        position: relative;
+    }
+    .responsive .navbar.responsive a.icon {
+        position: absolute;
+        right: 0;
+        top: 0;
+    }
+    .responsive .navbar.responsive a {
+        float: none;
+        display: block;
+        text-align: left;
+    }
 }
